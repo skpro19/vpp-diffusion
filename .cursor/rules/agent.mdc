@@ -10,3 +10,8 @@ alwaysApply: true
 - use typescript
 - try to reuse components
 - do not launch the vite server. I am manually running it in the background.
+
+
+# alias
+- `vpp-web` refers to `/home/skumar/ext_ssd/vpp-web`
+- `vpp-web/frontend` refers to `/home/skumar/ext_ssd/vpp-web/frontend/`
