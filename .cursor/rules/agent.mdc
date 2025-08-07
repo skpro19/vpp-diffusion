@@ -2,9 +2,10 @@
 alwaysApply: true
 ---
 
-# virtual python env
+# backend
 - source `.venv` before running any command or script. Use `source .venv/bin/activate`.
-- use `TMPDIR=./pip-cache pip install ..` instead of using just `pip install ...`. 
+- use `TMPDIR=./pip-cache` while installing `pip` packages. For e.g. `TMPDIR=./pip-cache pip install -r requirements.txt`
+- update `backend/requirements.txt` when installing any new `pip` package
 
 # frontend
 - use typescript
@@ -15,3 +16,8 @@ alwaysApply: true
 # alias
 - `vpp-web` refers to `/home/skumar/ext_ssd/vpp-web`
 - `vpp-web/frontend` refers to `/home/skumar/ext_ssd/vpp-web/frontend/`
+
+
+# ML code
+- set `HF_HOME` to `backend/.hf-cache` before running `backend/inpaint.py`
+- prefer `safetensors` over `bin` weight files
