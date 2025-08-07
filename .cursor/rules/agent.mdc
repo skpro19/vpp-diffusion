@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+# virtual python env
+- source `.venv` before running any command or script. Use `source .venv/bin/activate`.
+- use `TMPDIR=.pip-cache pip install ..` instead of using just `pip install ...`. 
+
+# frontend
+- use typescript
+- try to reuse components
