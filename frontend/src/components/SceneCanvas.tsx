@@ -5,8 +5,6 @@ import * as THREE from 'three';
 
 interface SceneCanvasProps {
   videoElement: HTMLVideoElement;
-  modelUrl: string | null;
-  exrFileUrl?: string | null;
   style?: React.CSSProperties;
 }
 
@@ -72,8 +70,6 @@ function RenderOrchestrator({ videoElement }: { videoElement: HTMLVideoElement |
 
 export default function SceneCanvas({
   videoElement,
-  modelUrl,
-  exrFileUrl,
   style,
 }: SceneCanvasProps) {
   return (
@@ -100,14 +96,6 @@ export default function SceneCanvas({
           position={[0, 0, 5]}
         />
 
-        {/* Optional: Add a simple cube to show 3D scene is working */}
-        {modelUrl && (
-          <mesh>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="orange" />
-          </mesh>
-        )}
-
         {/* Add lighting */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -126,8 +114,6 @@ export default function SceneCanvas({
         pointerEvents: 'none'
       }}>
         <div>Video: {videoElement ? 'Playing' : 'Not loaded'}</div>
-        <div>Model: {modelUrl ? 'Loaded' : 'Not loaded'}</div>
-        <div>EXR: {exrFileUrl ? 'Loaded' : 'Not loaded'}</div>
       </div>
     </div>
   );
