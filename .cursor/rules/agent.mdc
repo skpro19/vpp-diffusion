@@ -9,8 +9,8 @@ alwaysApply: true
 # frontend
 - use typescript
 - try to reuse components
-- do not launch the vite server. I am manually running it in the background.
-
+- do not launch the vite server. I am already running it in the background.
+- test the frontend changes at `http://localhost:5173/` using the `browsermcp`. Assume the server is already running.
 
 # alias
 - `vpp-web` refers to `/home/skumar/ext_ssd/vpp-web`
